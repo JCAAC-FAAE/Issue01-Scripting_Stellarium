@@ -1,0 +1,71 @@
+
+/*
+* Configuración
+*/
+
+var lbl = LabelMgr.labelObject(
+    '',
+    'Jupiter',
+    true,
+    36, '#ffffff',
+    'N', 250
+);
+
+core.setGuiVisible(false);
+core.setMountMode('equatorial');
+core.setTimeRate(0.0);
+core.selectObjectByName('Jupiter');
+core.setSelectedObjectInfo('None');
+LandscapeMgr.setFlagLandscape(false);
+StelMovementMgr.setAutoMoveDuration(0.0);
+StelMovementMgr.setFlagTracking(true);
+StelMovementMgr.zoomTo(0.0167, 0.0);
+SolarSystem.setFlagPointer(false);
+SolarSystem.setFlagOrbits(false);
+
+/*
+* Bucle principal
+*/
+
+var jd = [
+  2460967.0585855003,
+  2461386.423732,
+  2463312.0232595,
+  2463362.3377175,
+  2463462.443047,
+  2463596.925324,
+  2465306.6901634997,
+  2465340.340205,
+  2465490.652805,
+  2465641.2397775,
+  2465775.727678,
+  2467517.125278,
+  2467986.2149755,
+  2468171.1002674997,
+  2468271.1420334997
+];
+
+function getDateHM() {
+return core
+  .getDate('local')
+  .replace('T', ' ')
+  .slice(0, -3);
+}
+
+function display_event(i) {
+  core.setJDay(jd[i]);
+  LabelMgr.setLabelText(lbl, getDateHM());
+  core.wait(0.1);
+}
+
+const prefix = 'triple_galilean_';
+for (var i = 0; i < jd.length; i++) {
+  display_event(i);
+  core.screenshot(prefix);
+}
+
+/*
+* Limpieza
+*/
+LabelMgr.deleteAllLabels();
+core.setGuiVisible(true);
