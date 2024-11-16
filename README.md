@@ -1,9 +1,9 @@
-[`Issue #1`](https://federacionastronomica.es/index.php/the-journal/archive), page 10
-
-# Use case for Stellarium Scripting 
-> A simple option to visually present the phenomena we calculate is to generate, from our code, a script for Stellarium.
+[Journal of Computational Astronomy & Astronomical Computing (JCAAC)](https://federacionastronomica.es/index.php/the-journal/archive) [`No. 1, Nov. 2024, 49–56`](https://federacionastronomica.es/index.php/the-journal/archive/contents/612-uso-de-scripting-en-stellarium)
 
 # Caso de uso de scripting en Stellarium
-> Una opción sencilla para presentar visualmente los fenómenos que calculamos consiste en generar, desde nuestro código, un script para Stellarium.
+> En nuestros proyectos de cálculo de fenómenos obtenemos como resultado final un conjunto de fechas, entre otros datos de interés. Lejos de terminar aquí, la siguiente tarea, no menos importante y que puede requerir un esfuerzo considerable, es la presentación de los resultados. En este artículo proponemos el uso de Stellarium para este fin. Para ello mostraremos cómo generar desde nuestro programa un script de Stellarium que empaquete las fechas de los fenómenos que hemos calculado. Si bien es posible entregar directamente este script al usuario para que lo ejecute sobre Stellarium, aquí exploramos la opción de que el script capture imágenes de los fenómenos tal como los representa Stellarium, que posteriormente podamos emplear para ilustrar un documento o página web.
+
+# Use case for Stellarium Scripting 
+> In our phenomena computation projects we obtain as a final result a set of dates, among other data of interest. Far from ending here, the next task, which is no less important and may require considerable e!ort, is the presentation of the results. In this article we propose the use of Stellarium for this purpose. To do so, we will show how to generate a Stellarium script from our program that packages the dates of the phenomena we have calculated. Although it is possible to deliver this script directly to the user to run it on Stellarium, here we explore the option of having the script capture images of the phenomena as they are represented by Stellarium, which we can then use to illustrate a document or web page.
 
 :copyright: **Sergio Díaz** @sergio-dr 2024. Licensed under the EUPL.
